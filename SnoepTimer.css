@@ -1,0 +1,59 @@
+/**
+ * @see (https://github.com/procurios/SnoepTimer)
+ * @author Peter Slagter
+ * @license MIT
+ * @preserve
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+.SnoepTimer {
+    width: 100%;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background: transparent no-repeat center center;
+    background-size: cover;
+}
+
+.SnoepTimer--work {
+    background-image: url(img/work.jpg);
+}
+
+.SnoepTimer--sleep {
+    background-image: url(img/sleep.jpg);
+}
+
+.SnoepTimer--break {
+    background-image: url(img/break.jpg);
+}
+
+.SnoepTimer--lunch {
+    background-image: url(img/lunch.jpg);
+}
+
+.SnoepTimer__counter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 32vw;
+    text-shadow: 1px 1px 25px #000;
+    color: #fff;
+    z-index: 10;
+}
+
+.SnoepTimer__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .5);
+}
