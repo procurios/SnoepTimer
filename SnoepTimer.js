@@ -248,7 +248,7 @@
     SnoepTimer.prototype.getRemainingTimeString = function () {
         var remainingTimeInSeconds = this.periodData.timeRemaining / 1000;
         var remainingMinutes = parseInt(remainingTimeInSeconds / 60);
-        var remainingSeconds = remainingTimeInSeconds % 60;
+        var remainingSeconds = Math.floor(remainingTimeInSeconds % 60);
 
         remainingSeconds = (remainingSeconds < 10) ? '0' + remainingSeconds : remainingSeconds;
 
