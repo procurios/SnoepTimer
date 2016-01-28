@@ -83,7 +83,9 @@
     };
 
     SnoepTimer.prototype.drawCounter = function () {
-        this.snoepTimerCounter.innerHTML = this.getRemainingTimeString();
+        var html = "<span class='SnoepTimer__periodType'>" + this.periodData.type + "</span>";
+        html += this.getRemainingTimeString();
+        this.snoepTimerCounter.innerHTML = html;
     };
 
     SnoepTimer.prototype.resetNotificationFlags = function () {

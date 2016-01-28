@@ -48,6 +48,16 @@ body {
     z-index: 10;
 }
 
+.SnoepTimer__periodType {
+    display: inline-block;
+    font-size: 2vw;
+    vertical-align: middle;
+    margin-right: 15px;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+}
+
 .SnoepTimer__overlay {
     position: absolute;
     top: 0;
