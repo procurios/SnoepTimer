@@ -34,7 +34,7 @@
         this.currentPeriodType = '';
 
         this.dayStart = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 08, 30, 00);
-        this.dayEnd = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 16, 30, 00);
+        this.dayEnd = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 22, 00, 00);
         this.lunchStart = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 12, 30, 00);
         this.lunchEnd = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 13, 00, 00);
 
