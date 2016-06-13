@@ -1,0 +1,35 @@
+{
+  "name": "snoepTimer",
+  "version": "0.0.1",
+  "description": "Timer to synchronize timeboxes across teams",
+  "main": "src/snoepTimer.js",
+  "scripts": {
+    "start": "onchange 'src/*.*' -- npm run build",
+    "scripts": "browserify -s snoepTimer -do dist/snoepTimer.js src/snoepTimer.js && uglifyjs -m -c -o dist/snoepTimer.min.js dist/snoepTimer.js 2>/dev/null",
+    "styles": "cleancss src/snoepTimer.css -o dist/snoepTimer.min.css",
+    "build": "npm run scripts && npm run styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/procurios/SnoepTimer.git"
+  },
+  "author": "Peter Slagter <peter.slagter@procurios.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/procurios/SnoepTimer/issues"
+  },
+  "dependencies": {
+    "moment": "2.13.0"
+  },
+  "devDependencies": {
+    "browserify": "8.1.0",
+    "clean-css": "3.0.4",
+    "uglify-js": "2.4.16",
+    "watchify": "2.2.1",
+    "onchange": "latest",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0"
+  }
+}

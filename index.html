@@ -5,15 +5,14 @@
         <title>SNOEP timer</title>
         <meta name='description' content='SNOEP timer'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link id='favicon' href='' rel='icon' type='image/x-icon'>
-        <link href='SnoepTimer.css' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <link id='favicon' href='assets/img/icon-alarm.png' rel='icon' type='image/x-icon'>
+        <link href='dist/snoepTimer.min.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div class='SnoepTimer'>
-            <div class='SnoepTimer__counter'>00:00</div>
-            <div class='SnoepTimer__overlay'></div>
+        <div class='snoepTimer__container'>
+            <time class='snoepTimer'>00:00</time>
         </div>
-        <script src='SnoepTimer.js'></script>
+        <script src='dist/snoepTimer.min.js'></script>
+        <script>snoepTimer();</script>
     </body>
 </html>

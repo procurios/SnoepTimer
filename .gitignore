@@ -1,0 +1,13 @@
+# PhpStorm and IntelliJ IDEA
+/.idea
+
+# Temporary files
+*~
+*.orig
+
+# OS X
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules
