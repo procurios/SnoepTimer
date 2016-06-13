@@ -40,7 +40,7 @@ function snoepTimer () {
         // Notify user that current period is about to end
         if (duration.minutes() <= 1 && !isPeriodEndsNotificationSent) {
             isPeriodEndsNotificationSent = true;
-            return notifier.notifyPeriodEnd(periodType + ' is about to end');
+            return notifier.notifyPeriodEnd(periodType);
         }
     }
 
