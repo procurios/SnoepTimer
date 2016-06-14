@@ -33,13 +33,6 @@ function notifier () {
 
     /**
      * @param {string} periodType
-     */
-    function notifyPeriodEnd (periodType) {
-        notify(getPeriodEndTitle(periodType), getPeriodEndBody(periodType));
-    }
-
-    /**
-     * @param {string} periodType
      * @returns {string}
      */
     function getPeriodStartTitle (periodType) {
@@ -61,34 +54,6 @@ function notifier () {
 
         if (periodType === 'lunch') {
             return 'Omnomnomnomnom, food! Enjoy!'
-        }
-
-        return '';
-    }
-
-    /**
-     * @param {string} periodType
-     * @returns {string}
-     */
-    function getPeriodEndTitle (periodType) {
-        return 'Period about to end: ' + periodType;
-    }
-
-    /**
-     * @param {string} periodType
-     * @returns {*}
-     */
-    function getPeriodEndBody (periodType) {
-        if (periodType === 'break') {
-            return 'Coffee: ✓. Board updated: ✓. All messages answered: ✓. All set to get back to work!';
-        }
-
-        if (periodType === 'work') {
-            return 'Break coming up. Time to create a snapshot of your work, and maybe even get it reviewed?';
-        }
-
-        if (periodType === 'lunch') {
-            return 'Hopefully you are past your after-lunch dip, because a fresh period of work is starting soon.';
         }
 
         return '';

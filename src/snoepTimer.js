@@ -9,7 +9,6 @@ function snoepTimer () {
     var notifier = getNotifier();
     var counterElem = document.querySelector('.snoepTimer');
     var currentPeriodType;
-    var isPeriodEndsNotificationSent = false;
 
     notifier.getPermission();
     window.setInterval(updateTimer, 1000);
@@ -19,7 +18,7 @@ function snoepTimer () {
         var period = getPeriod(now, getMoment);
         var duration = getDuration(period.end, now);
 
-        castNotifications(duration, period.type);
+        castNotifications(period.type);
         updateBrowserTitle(duration.humanize());
         drawCounter(duration.humanize());
     }
@@ -29,19 +28,14 @@ function snoepTimer () {
      * @param {string} periodType
      * @returns {*}
      */
-    function castNotifications (duration, periodType) {
+    function castNotifications (periodType) {
         // Notify user that new period has started
-        if (currentPeriodType !== periodType) {
-            isPeriodEndsNotificationSent = false;
-            currentPeriodType = periodType;
-            return notifier.notifyPeriodStart(periodType);
+        if (currentPeriodType === periodType) {
+            return;
         }
 
-        // Notify user that current period is about to end
-        if (duration.minutes() <= 1 && !isPeriodEndsNotificationSent) {
-            isPeriodEndsNotificationSent = true;
-            return notifier.notifyPeriodEnd(periodType);
-        }
+        currentPeriodType = periodType;
+        return notifier.notifyPeriodStart(periodType);
     }
 
     /**
