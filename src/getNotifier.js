@@ -8,8 +8,7 @@ function notifier () {
 
     return {
         getPermission: getPermission,
-        notifyPeriodStart: notifyPeriodStart,
-        notifyPeriodEnd: notifyPeriodEnd
+        notifyPeriodStart: notifyPeriodStart
     };
 
     /**
