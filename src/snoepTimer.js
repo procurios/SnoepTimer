@@ -27,7 +27,7 @@ function snoepTimer () {
         updatePeriodType(period.type);
         updateFavIcon(duration);
 
-        currentPeriodType = periodType;
+        currentPeriodType = period.type;
     }
 
     /**
