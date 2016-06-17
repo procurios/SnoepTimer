@@ -26,6 +26,8 @@ function snoepTimer () {
         updateCounter(duration.humanize());
         updatePeriodType(period.type);
         updateFavIcon(duration);
+
+        currentPeriodType = periodType;
     }
 
     /**
@@ -38,7 +40,6 @@ function snoepTimer () {
             return;
         }
 
-        currentPeriodType = periodType;
         return notifier.notifyPeriodStart(periodType);
     }
 
