@@ -39,11 +39,11 @@ body {
 
 .snoepTimer__periodType {
     position: fixed;
-    top: -7vw;
+    top: -9vw;
     left: 0;
     right: 0;
     padding: 10px 20px;
-    color: #ddd;
+    color: #444;
     font-size: 15vw;
     text-align: center;
     font-family: "Arial Black", sans-serif;
@@ -55,16 +55,14 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 5vw;
-    background: rgba(255, 255, 255,.95);
-    border-bottom: 1px solid #fff;
-    box-shadow: 0 0 25px #000;
+    height: 4vw;
+    background: rgba(255, 255, 255, .7);
 }
 
 .snoepTimer__logo {
     display: block;
-    width: 4vw;
-    height: 4vw;
+    width: 3vw;
+    height: 3vw;
     position: absolute;
     top: .5vw;
     left: .5vw;
