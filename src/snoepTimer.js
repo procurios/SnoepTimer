@@ -8,6 +8,7 @@ var getNotifier = require('./getNotifier');
 function snoepTimer () {
     var notifier = getNotifier();
     var counterElem = document.querySelector('.snoepTimer');
+    var periodTypeElem = document.querySelector('.snoepTimer__periodType');
     var currentPeriodType;
 
     notifier.getPermission();
@@ -20,7 +21,8 @@ function snoepTimer () {
 
         castNotifications(period.type);
         updateBrowserTitle(duration.humanize());
-        drawCounter(duration.humanize());
+        updateCounter(duration.humanize());
+        updatePeriodType(period.type);
     }
 
     /**
@@ -48,8 +50,19 @@ function snoepTimer () {
     /**
      * @param {string} timeRemainingText
      */
-    function drawCounter (timeRemainingText) {
+    function updateCounter (timeRemainingText) {
         counterElem.innerHTML = timeRemainingText;
+    }
+
+    /**
+     * @param {string} periodType
+     */
+    function updatePeriodType (periodType) {
+        if (currentPeriodType === periodType && periodTypeElem.innerHTML !== '') {
+            return;
+        }
+
+        periodTypeElem.innerHTML = periodType;
     }
 }
 
