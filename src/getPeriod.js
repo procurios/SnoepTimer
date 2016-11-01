@@ -21,7 +21,7 @@ function getPeriod (now, getMoment) {
         };
     }
 
-    if (now.minutes() >= 25 && now.minutes() < 30) {
+    if (now.minutes() >= 20 && now.minutes() < 30) {
         return {
             type: periodTypes.break,
             start: getMoment(now).hours(now.hours()).minutes(25).seconds(0),
@@ -29,7 +29,7 @@ function getPeriod (now, getMoment) {
         }
     }
 
-    if (now.minutes() >= 55 && now.minutes() < 60) {
+    if (now.minutes() >= 50 && now.minutes() < 60) {
         return {
             type: periodTypes.break,
             start: getMoment(now).hours(now.hours()).minutes(55).seconds(0),
@@ -37,7 +37,7 @@ function getPeriod (now, getMoment) {
         }
     }
 
-    if (now.minutes() < 25) {
+    if (now.minutes() < 30) {
         return {
             type: periodTypes.work,
             start: getMoment(now).hours(now.hours()).minutes(0).seconds(0),
